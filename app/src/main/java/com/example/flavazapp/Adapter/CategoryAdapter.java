@@ -65,8 +65,8 @@ ArrayList<CategoryDomain> categoryDomains;
         int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(pictureUrl, "drawable",holder.itemView.getContext().getPackageName());
 
        Glide.with(holder.itemView.getContext())
-                .load(drawableResourceId)
-            .into(holder.categoryPicture);
+               .load(drawableResourceId)
+               .into(holder.categoryPicture);
 
     }
 
