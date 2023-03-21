@@ -25,6 +25,7 @@ ArrayList<CategoryDomain> categoryDomains;
         this.categoryDomains = categoryDomains;
     }
 
+    @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View inflate= LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_category,parent,false);
@@ -32,37 +33,37 @@ ArrayList<CategoryDomain> categoryDomains;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder holder, int position) {
         holder.categoryName.setText(categoryDomains.get(position).getTitle());
-        String pictureUrl = "";
+        String picUrl = "";
         switch (position) {
             case 0:{
-                pictureUrl="cat_1";
+                picUrl="cat_1";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.cat_background1));
             break;
             }
             case 1:{
-                pictureUrl="cat_2";
+                picUrl="cat_2";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.cat_background2));
             break;
             }
             case 2:{
-                pictureUrl="cat_3";
+                picUrl="cat_3";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.cat_background3));
             break;
             }
             case 3:{
-                pictureUrl="cat_4";
+                picUrl="cat_4";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.cat_background4));
             break;
             }
             case 5:{
-                pictureUrl="cat_5";
+                picUrl="cat_5";
                 holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(),R.drawable.cat_background5));
             break;
             }
         }
-        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(pictureUrl, "drawable",holder.itemView.getContext().getPackageName());
+        int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(picUrl, "drawable",holder.itemView.getContext().getPackageName());
 
        Glide.with(holder.itemView.getContext())
                .load(drawableResourceId)
