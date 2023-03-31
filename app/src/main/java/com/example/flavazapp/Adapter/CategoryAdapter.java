@@ -85,7 +85,7 @@ ArrayList<CategoryDomain> categoryDomains;
             super(itemView);
             categoryName=itemView.findViewById(R.id.categoryName);
             categoryPicture=itemView.findViewById(R.id.categoryPicture);
-            mainLayout=itemView.findViewById(R.id.ConstraintLayout);
+            mainLayout=itemView.findViewById(R.id.mainLayout);
         }
     }
 }

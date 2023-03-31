@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewCategoryList=findViewById(R.id.recyclerView);
         recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
+
         ArrayList<CategoryDomain> category=new ArrayList<>();
         category.add(new CategoryDomain("Pizza", "cat_1"));
         category.add(new CategoryDomain("Burger", "cat_2"));
@@ -44,11 +45,13 @@ public class MainActivity extends AppCompatActivity {
     private void recyclerViewPopular(){
         LinearLayoutManager linearLayoutManager= new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerViewPopularlist=findViewById(R.id.recyclerView2);
+        recyclerViewPopularlist.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> foodList=new ArrayList<>();
         foodList.add(new FoodDomain("Pepperoni Pizza","pizza1","Slices Pepperoni, Mozzerella Cheese, Ground Black Peppers, Pizza Sauce", 7.99));
         foodList.add(new FoodDomain("Cheese Burger", "burger","Beef, Cheese Slice, Burger Sauce, Lettuce, Tomatoes",5.99));
-        foodList.add(new FoodDomain("Vegetable Pizza", "pizza2","Olive Oil, Vegetable Oil, Onions, SweetCorn, Peppers, Mudshrooms",6.99));
+        foodList.add(new FoodDomain("Vegetable Pizza", "pizza2","Olive Oil, Vegetable Oil, Onions, SweetCorn, Peppers, Mushrooms",6.99));
+        foodList.add(new FoodDomain("Chicken Burger ", "burger","Chicken, Cheese Slice, Burger Sauce, Lettuce, Tomatoes",5.99));
 
         adapter2=new PopularAdapter(foodList);
         recyclerViewPopularlist.setAdapter(adapter2);
