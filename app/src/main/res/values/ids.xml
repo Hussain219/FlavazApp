@@ -4,4 +4,7 @@
     <item name="categoryName" type="id" />
     <item name="categoryPicture" type="id" />
     <item name="ConstraintLayout" type="id" />
+    <item name="plusBtn" type="id" />
+    <item name="minusBtn" type="id" />
+    <item name="totalFeeTxt" type="id" />
 </resources>
